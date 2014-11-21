@@ -1,6 +1,12 @@
 
 local IGNORED_WRITES = {}
-local IGNORED_READS = {qt=true, _PROMPT=true, _PROMPT2=true, writeObjects=true}
+local IGNORED_READS = {
+    qt=true,
+    _PROMPT=true,
+    _PROMPT2=true,
+    writeObjects=true,
+    arg=true,
+}
 
 -- Raises an error when an undeclared variable is read.
 local function guardGlobals()
